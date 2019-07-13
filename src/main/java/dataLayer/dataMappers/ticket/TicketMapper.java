@@ -75,6 +75,7 @@ public class TicketMapper {
                 tickets.add(this.convertResultSetToDomainModel(resultSet));
             }
 
+            resultSet.close();
             st.close();
             con.close();
         } catch (SQLException e) {

@@ -36,6 +36,9 @@ public class CityMapper {
                 cities.add(CityMapper.convertResultSetToCityModel(resultSet));
             }
 
+            resultSet.close();
+            st.close();
+            con.close();
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
